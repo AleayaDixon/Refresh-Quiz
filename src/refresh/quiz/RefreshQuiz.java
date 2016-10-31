@@ -22,8 +22,9 @@ public class RefreshQuiz {
         int limit = keyboard.nextInt();
         System.out.println("How many numbers would you like to generate?");
         int nums = keyboard.nextInt();
-        if(limit > 20 || nums > 20)
+        if(limit > 20 || nums > 20 || limit < 1 || nums < 1)
         {
+            System.out.println("Try again. Please choose numbers between 1 and 20.");
             System.out.println("What number would you like to generate random numbers up to?");
             limit = keyboard.nextInt();
             System.out.println("How many numbers would you like to generate?");
@@ -32,7 +33,7 @@ public class RefreshQuiz {
         
         for(int i = 0; i<nums; i++)
         {
-        int ran = 1 + x.nextInt(limit + 1);
+        int ran = 1 + x.nextInt(limit);
         System.out.println(ran);
         }
         keyboard.close();
