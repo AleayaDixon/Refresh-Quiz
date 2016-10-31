@@ -30,7 +30,8 @@ public class RefreshQuiz {
             System.out.println("How many numbers would you like to generate?");
             nums = keyboard.nextInt();
         }
-        
+        System.out.println("num1: " + limit);
+        System.out.println("num 2: " + nums);
         for(int i = 0; i<nums; i++)
         {
         int ran = 1 + x.nextInt(limit);
